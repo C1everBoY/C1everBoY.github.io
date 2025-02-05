@@ -551,7 +551,7 @@ header .go-back i {
     height: 40vh !important;
 }
 
-.bg-cover:after {
+/*.bg-cover:after {
     -webkit-animation: rainbow 60s infinite;
     animation: rainbow 60s infinite;
 }
@@ -567,7 +567,7 @@ header .go-back i {
     top: 0;
     content: "";
 }
-
+*/
 .bg-cover .container {
     position: relative;
     color: #fff;
@@ -593,6 +593,7 @@ header .go-back i {
     font-size: 2.5rem;
     font-weight: 400;
 }
+
 /*
 @-webkit-keyframes rainbow {
 
