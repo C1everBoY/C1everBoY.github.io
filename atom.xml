@@ -6,7 +6,7 @@
   <link href="https://c1everboy.github.io/atom.xml" rel="self"/>
   
   <link href="https://c1everboy.github.io/"/>
-  <updated>2025-02-04T02:45:16.628Z</updated>
+  <updated>2025-02-10T01:22:29.668Z</updated>
   <id>https://c1everboy.github.io/</id>
   
   <author>
@@ -15,6 +15,104 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://c1everboy.github.io/2025/02/11/zuo-ti-zhu-yi-shi-xiang/"/>
+    <id>https://c1everboy.github.io/2025/02/11/zuo-ti-zhu-yi-shi-xiang/</id>
+    <published>2025-02-11T05:25:30.727Z</published>
+    <updated>2025-02-10T01:22:29.668Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一些小事：&quot;&gt;&lt;a href=&quot;#一些小事：&quot; class=&quot;headerlink&quot; title=&quot;一些小事：&quot;&gt;&lt;/a&gt;一些小事：&lt;/h1&gt;&lt;p&gt;用nc的时候要去掉冒号&lt;/p&gt;
+&lt;p&gt;py2和py3写exp有区别，py3要对字符串处理：在 Python 3</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://c1everboy.github.io/2025/02/11/suan-fa/"/>
+    <id>https://c1everboy.github.io/2025/02/11/suan-fa/</id>
+    <published>2025-02-11T05:25:30.726Z</published>
+    <updated>2025-02-11T05:19:25.037Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一&quot;&gt;&lt;a href=&quot;#一&quot; class=&quot;headerlink&quot; title=&quot;一&quot;&gt;&lt;/a&gt;一&lt;/h1&gt;&lt;h2 id=&quot;1-取大&quot;&gt;&lt;a href=&quot;#1-取大&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://c1everboy.github.io/2025/02/11/gong-fang-shi-jie-pwn/"/>
+    <id>https://c1everboy.github.io/2025/02/11/gong-fang-shi-jie-pwn/</id>
+    <published>2025-02-11T05:25:30.725Z</published>
+    <updated>2025-02-10T01:39:35.776Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;食用须知：&quot;&gt;&lt;a href=&quot;#食用须知：&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://c1everboy.github.io/2025/02/11/pwn-na-xie-shi/"/>
+    <id>https://c1everboy.github.io/2025/02/11/pwn-na-xie-shi/</id>
+    <published>2025-02-11T05:25:30.723Z</published>
+    <updated>2025-02-10T01:39:22.535Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://c1everboy.github.io/2025/02/11/buuctf-pwn/"/>
+    <id>https://c1everboy.github.io/2025/02/11/buuctf-pwn/</id>
+    <published>2025-02-11T05:25:30.722Z</published>
+    <updated>2025-02-09T13:55:40.512Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;食用须知：&quot;&gt;&lt;a href=&quot;#食用须知：&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
