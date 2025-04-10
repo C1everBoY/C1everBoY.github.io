@@ -4,14 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="C1everBoY">
-    <meta name="description" content="title: 栈以及前置基础
-date: 2025-04-10 16:25:03
-author: C1everBoY
-img: /source/images/xxx.jpg
-top: true
-cover: true
-coverImg: /">
+    <meta name="keywords" content="栈以及前置基础, C1everBoY">
+    <meta name="description" content="（置顶）从pwn到uʍd">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -23,7 +17,7 @@ coverImg: /">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>C1everBoY</title>
+    <title>栈以及前置基础 | C1everBoY</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
     <style>
@@ -53,9 +47,7 @@ coverImg: /">
 
 
 
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
     <link rel="stylesheet" href="/css/post.css">
-
 
 
 
@@ -332,7 +324,7 @@ coverImg: /">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">栈以及前置基础</h1>
                 </div>
             </div>
         </div>
@@ -342,24 +334,39 @@ coverImg: /">
 
 
 
-<main class="post-container content">
+<main class="container content">
 
     
-    <div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
+    <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%A0%88/">
+                                <span class="chip bg-color">栈</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">
+                                <span class="chip bg-color">知识点</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/PWN/" class="post-category">
+                                PWN
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -404,23 +411,7 @@ coverImg: /">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <pre class=" language-language-yaml"><code class="language-language-yaml">title: 栈以及前置基础
-date: 2025-04-10 16:25:03
-author: C1everBoY
-img: /source/images/xxx.jpg
-top: true
-cover: true
-coverImg: /images/1.jpg
-password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92
-toc: false
-mathjax: false
-summary: 从pwn到uʍd
-categories: Markdown
-tags:
-  - 栈
-  - 知识点
-</code></pre>
-<h1 id="00-简介"><a href="#00-简介" class="headerlink" title="00 - 简介"></a>00 - 简介</h1><p>总觉得东记记西记记很麻烦，干脆就把收集到的知识点写一块了。。。。。。</p>
+                <h1 id="00-简介"><a href="#00-简介" class="headerlink" title="00 - 简介"></a>00 - 简介</h1><p>总觉得东记记西记记很麻烦，干脆就把收集到的知识点写一块了。。。。。。</p>
 <p>绝大部分知识点还不够完善，日后会慢慢补充。</p>
 <h1 id="01-汇编入门"><a href="#01-汇编入门" class="headerlink" title="01 - 汇编入门"></a>01 - 汇编入门</h1><h2 id="1-汇编语言"><a href="#1-汇编语言" class="headerlink" title="1.汇编语言"></a>1.汇编语言</h2><p>汇编语言：<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=75gBFiFtAb8&amp;themeRefresh=1">https://www.youtube.com/watch?v=75gBFiFtAb8&amp;themeRefresh=1</a></p>
 <p>汇编代码是由处理器在计算机上实际运行的代码。汇编代码有很多不同的架构。不同类型的处理器可以运行不同类型的汇编代码。最常接触的两种类型是 64 位和 32 位 ELF（可执行与可链接格式）。通常会把这两种分别称为<code>x64</code>和<code>x86</code>。（64位和32位）</p>
@@ -507,7 +498,15 @@ r9：第六个参数
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E6%A0%88/">
+                                    <span class="chip bg-color">栈</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">
+                                    <span class="chip bg-color">知识点</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -551,39 +550,53 @@ r9：第六个参数
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2025/04/10/zhan-yi-ji-qian-zhi-ji-chu/">
+                <a href="/2025/04/10/dui-yi-ji-qi-ta-ji-qiao/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="堆以及其它技巧">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">堆以及其它技巧</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            （置顶）从uʍd到pwn
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2025-04-10
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2025-04-10
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            C1everBoY
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/PWN/" class="post-category">
+                                    PWN
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/">
+                        <span class="chip bg-color">知识点</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%A0%86/">
+                        <span class="chip bg-color">堆</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -653,87 +666,6 @@ r9：第六个参数
 
 
 
-    </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
-            <div id="toc-content"></div>
-        </div>
-    </div>
-</div>
-
-<!-- TOC 悬浮按钮. -->
-
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
-    </a>
-</div>
-
-
-<script src="/libs/tocbot/tocbot.min.js"></script>
-<script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        
-    });
-</script>
-
     
 
 </main>
@@ -760,7 +692,7 @@ r9：第六个参数
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">1.8k</span>
+                        class="white-color">3.6k</span>
             
             
             
